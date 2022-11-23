@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Grid from "@mui/material/Grid";
+import Typography from '@mui/material/Typography';
+
+import PassengerInformationForm from "./components/PassengerInformationForm";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Grid item p={2}>
+        <Grid item xs={12}>
+          <Typography variant="h2" color='primary'>
+            Passenger information
+          </Typography>
+        </Grid>
+        <Grid item xs={12} mt={2}>
+          <Typography variant="p" color='secondary'>
+            Enter the required information for each traveler and be sure that it exactly matches the government-issued ID Typographyresented at the airport.
+          </Typography>
+        </Grid>
+        <Grid item mt={6}>
+          <Typography variant="p" color='#6E7491'>
+            Passenger 1 (Adult)
+          </Typography>
+        </Grid>
+      </Grid>
+      <PassengerInformationForm/>
+    </>
   );
 }
 
